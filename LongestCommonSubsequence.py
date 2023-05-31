@@ -1,4 +1,4 @@
-def lcs_length(str1, str2):
+def create_LCS_table(str1, str2):
     m = len(str1)
     n = len(str2)
 
@@ -49,7 +49,7 @@ if __name__ == "__main__":
     str1 = input("Enter First String: ")
     str2 = input("Enter Second String: ")
 
-    table = lcs_length(str1, str2)
+    table = create_LCS_table(str1, str2)
     print("\nTable:")
     for row in table:
         print(row)
