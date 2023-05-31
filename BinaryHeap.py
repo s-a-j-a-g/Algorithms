@@ -12,7 +12,7 @@ class BinaryHeap:
         while i // 2 > 0:
             if self.heap_list[i] < self.heap_list[i//2]:
                 self.heap_list[i //
-                               2], self.heap_list[i] = (self.heap_list[i], self.heap_list[i // 2],)
+                               2], self.heap_list[i] = self.heap_list[i], self.heap_list[i // 2]
             i = i // 2
 
     def insert(self, k):
@@ -24,8 +24,7 @@ class BinaryHeap:
         while (i * 2) <= self.current_size:
             me = self.min_child(i)
             if self.heap_list[i] > self.heap_list[me]:
-                self.heap_list[i], self.heap_list[me] = (
-                    self.heap_list[me], self.heap_list[i],)
+                self.heap_list[i], self.heap_list[me] = self.heap_list[me], self.heap_list[i]
             i = me
 
     def min_child(self, i):
